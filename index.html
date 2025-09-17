@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precieux Okitakoy BioLink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Audio Candy Shop -->
+  <audio autoplay loop id="bg-audio">
+    <source src="https://archive.org/download/candy-shop_202411/Candy%20Shop.mp3" type="audio/mpeg">
+    Ton navigateur ne supporte pas l'audio HTML5.
+  </audio>
+
+  <script>
+  document.getElementById("bg-audio").volume = 0.2;
+</script>
+  
+  <button onclick="document.getElementById('bg-audio').play()">🔊 Lancer le son</button>
+  
+  <script>
+  document.body.addEventListener("click", () => {
+    const audio = document.getElementById("bg-audio");
+    audio.play();
+}, { once: true});
+</script>
+  
+  <!-- QR Code -->
+  <div class="qr-container">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/243982730192" alt="QR WhatsApp">
+    <p>Scan pour WhatsApp</p>
+  </div>
+
+  <!-- Carte Profil -->
+  <div class="card">
+    <img src="https://files.catbox.moe/epqat7.jpg" alt="Photo de profil" class="avatar">
+    <h1>@precieux_okitakoy</h1>
+    <p>Créateur IA | Paroles, sons et créativité</p>
+
+    <div class="stats">
+      <div><strong>65k</strong><span>Vues</span></div>
+      <div><strong>1M</strong><span>Abonnés</span></div>
+      <div><strong>250</strong><span>Likes</span></div>
+    </div>
+
+    <div class="links">
+      <a href="https://www.tiktok.com/@suspect.eza99" target="_blank">📱 TikTok</a>
+      <a href="https://www.instagram.com/nexblad" target="_blank">📸 Instagram</a>
+      <a href="https://www.youtube.com/@GenXmedia" target="_blank">▶️ YouTube</a>
+      <a href="https://www.facebook.com/precieux.okitakoy99.0" target="_blank">📘 Facebook</a>
+      <a href="mailto:okitakoyprecieux@gmail.com">✉️ Email</a>
+      <a href="https://wa.me/243982730192" target="_blank">💬 WhatsApp 1</a>
+      <a href="https://wa.me/243894697490" target="_blank">💬 WhatsApp 2</a>
+    </div>
+
+    <button onclick="copyWhatsApp()">📋 Copier mon WhatsApp</button>
+  </div>
+
+  <!-- Son de clic -->
+  <audio id="clickSound" src="https://freesound.org/data/previews/256/256113_3263906-lq.mp3"></audio>
+
+  <script>
+    // Volume doux pour le fond audio
+    document.getElementById("bg-audio").volume = 0.2;
+
+    // Son de clic sur les liens
+    const sound = document.getElementById("clickSound");
+    document.querySelectorAll(".links a").forEach(link => {
+      link.addEventListener("click", () => {
+        sound.play();
+});
+});
+
+    // Copier WhatsApp
+    function copyWhatsApp() {
+      const number = "+243982730192";
+      navigator.clipboard.writeText(number).then(() => {
+        alert("Numéro WhatsApp copié: " + number);
+});
+}
+  </script>
+</body>
+    </html>
