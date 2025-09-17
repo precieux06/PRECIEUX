@@ -1,0 +1,2 @@
+# PRECIEUX
+Mon profil professionnel 🤖🥰
