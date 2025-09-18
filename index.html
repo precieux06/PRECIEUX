@@ -6,6 +6,10 @@
   <title>Precieux Okitakoy BioLink</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Script Google AdSense pour vérification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6200161631370932"
+     crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Audio Candy Shop -->
@@ -15,18 +19,18 @@
   </audio>
 
   <script>
-  document.getElementById("bg-audio").volume = 0.2;
-</script>
-  
+    document.getElementById("bg-audio").volume = 0.2;
+  </script>
+
   <button onclick="document.getElementById('bg-audio').play()">🔊 Lancer le son</button>
-  
+
   <script>
-  document.body.addEventListener("click", () => {
-    const audio = document.getElementById("bg-audio");
-    audio.play();
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("bg-audio");
+      audio.play();
 }, { once: true});
-</script>
-  
+  </script>
+
   <!-- QR Code -->
   <div class="qr-container">
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/243982730192" alt="QR WhatsApp">
@@ -62,9 +66,6 @@
   <audio id="clickSound" src="https://freesound.org/data/previews/256/256113_3263906-lq.mp3"></audio>
 
   <script>
-    // Volume doux pour le fond audio
-    document.getElementById("bg-audio").volume = 0.2;
-
     // Son de clic sur les liens
     const sound = document.getElementById("clickSound");
     document.querySelectorAll(".links a").forEach(link => {
